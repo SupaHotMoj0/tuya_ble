@@ -16,10 +16,7 @@ from homeassistant.const import (
 )
 from homeassistant.core import HomeAssistant
 from homeassistant.components.tuya.const import (
-    CONF_ACCESS_ID,
-    CONF_ACCESS_SECRET,
     CONF_APP_TYPE,
-    CONF_AUTH_TYPE,
     CONF_ENDPOINT,
     DOMAIN as TUYA_DOMAIN,
     TUYA_RESPONSE_RESULT,
@@ -56,6 +53,13 @@ from .const import (
     TUYA_API_DEVICES_URL,
     TUYA_API_FACTORY_INFO_URL,
     TUYA_FACTORY_INFO_MAC,
+    TUYA_API_DEVICES_URL,
+    TUYA_API_FACTORY_INFO_URL,
+    TUYA_FACTORY_INFO_MAC,
+    CONF_ACCESS_ID,
+    CONF_ACCESS_SECRET,
+    CONF_AUTH_TYPE,
+    SMARTLIFE_APP,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -131,16 +135,11 @@ class HASSTuyaBLEDeviceManager(AbstaractTuyaBLEDeviceManager):
         if len(data) == 0:
             return {}
 
-#        api = TuyaOpenAPI(
-#            endpoint=data.get(CONF_SS_ID, ""),
-#            access_secret=data.get(CONF_ACCESS_SECRET, ""),
-#            auth_type=data.get(CONF_AUTH_TYPE, ""),
-#        )
-
         api = TuyaOpenAPI(
             endpoint=data.get(CONF_ENDPOINT, ""),
             access_id=data.get(CONF_ACCESS_ID, ""),
             access_secret=data.get(CONF_ACCESS_SECRET, ""),
+            auth_type=data.get(CONF_AUTH_TYPE, ""),
         )
         api.set_dev_channel("hass")
 
