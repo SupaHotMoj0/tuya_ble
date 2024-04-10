@@ -1,10 +1,10 @@
-# Home Assistant support for Tuya BLE devices
+# Home Assistant support for Some Tuya BLE devices
 
 ## Overview
 
 This integration supports Tuya devices connected via BLE.
 
-_Inspired by code of [@redphx](https://github.com/redphx/poc-tuya-ble-fingerbot)_
+_Inspired by code of [@PlusPlus-u](https://github.com/PlusPlus-ua/ha_tuya_ble) & [@redphx](https://github.com/redphx/poc-tuya-ble-fingerbot)_
 
 ## Installation
 
