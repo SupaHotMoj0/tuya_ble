@@ -354,6 +354,16 @@ class TuyaBLEConfigFlow(ConfigFlow, domain=DOMAIN):
     ) -> TuyaBLEOptionsFlow:
         """Get the options flow for this handler."""
         return TuyaBLEOptionsFlow(config_entry)
+
+@dataclass
+class Country:
+    """Describe a supported country."""
+
+    name: str
+    country_code: str
+    endpoint: str = TuyaCloudOpenAPIEndpoint.AMERICA
+
+
 # https://developer.tuya.com/en/docs/iot/oem-app-data-center-distributed?id=Kafi0ku9l07qb
 TUYA_COUNTRIES = [
     Country("Afghanistan", "93", TuyaCloudOpenAPIEndpoint.EUROPE),
