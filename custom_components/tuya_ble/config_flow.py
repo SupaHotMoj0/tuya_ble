@@ -1,6 +1,7 @@
 """Config flow for Tuya BLE integration."""
 
 from __future__ import annotations
+from dataclasses import dataclass
 
 import logging
 import pycountry
