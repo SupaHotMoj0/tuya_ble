@@ -1,4 +1,4 @@
-<h1 align="center">Home Assistant Support for Some Tuya BLE Devices</h1>
+<h1 align="center">Home Assistant Support <br>for Some Tuya BLE Devices</h1>
 
 <p align="center">
   <img src="https://img.shields.io/github/license/SupaHotMoj0/tuya_ble?style=flat-square" alt="License">
