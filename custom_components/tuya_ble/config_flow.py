@@ -8,7 +8,7 @@ import pycountry
 from typing import Any
 
 import voluptuous as vol
-from tuya_iot import AuthType
+from tuya_iot import AuthType, TuyaCloudOpenAPIEndpoint
 
 from homeassistant.config_entries import (
     ConfigEntry,
