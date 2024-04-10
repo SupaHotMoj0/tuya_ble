@@ -9,7 +9,7 @@
 <h2 align="center">Overview</h2>
 
 <p align="center">
-  This integration facilitates the connection of Tuya devices via BLE.
+  This integration supports Tuya devices connected via BLE.
 </p>
 
 <p align="center">
@@ -31,81 +31,61 @@
 <h2 align="center">Usage</h2>
 
 <p align="center">
-  Once integrated into Home Assistant, the system should automatically discover all supported Bluetooth devices. Alternatively, you can manually add discoverable devices.
+  After adding to Home Assistant, the integration should automatically discover all supported Bluetooth devices, or you can add discoverable devices manually.
 </p>
 
 <p align="center">
-  Please note that while the integration operates locally, connecting to a Tuya BLE device requires a device ID and encryption key from the Tuya IoT cloud. These credentials can be obtained using the same credentials as the official Tuya integration. For more information on obtaining these credentials, please refer to the official Tuya integration <a href="https://www.home-assistant.io/integrations/tuya/">documentation</a>.
+  Please note that while the integration operates locally, connecting to a Tuya BLE device requires a device ID and encryption key from the Tuya IoT cloud. These credentials can be obtained using the same credentials as the official Tuya integration. For more information on obtaining these credentials, please refer to the official <a href="https://www.home-assistant.io/integrations/tuya/">Tuya integration documentation</a>.
 </p>
 
-<h2 align="center">Supported Devices</h2>
-
-<h3>Fingerbots (Category ID: 'szjqr')</h3>
+<h2 align="center">Supported Devices List</h2>
 
 <ul>
   <li>
-    <strong>Fingerbot</strong> (Product IDs: 'ltak7e1p', 'y6kttvd6', 'yrnk7mnn', 'nvr2rocq', 'bnt7wajf', 'rvdceqjh', '5xhbk964'): The original device, powered by a CR2 battery.
+    <h3>Fingerbots (Category ID: 'szjqr')</h3>
+    <ul>
+      <li>Fingerbot (Product IDs: 'ltak7e1p', 'y6kttvd6', 'yrnk7mnn', 'nvr2rocq', 'bnt7wajf', 'rvdceqjh', '5xhbk964'): The original device, powered by a CR2 battery.</li>
+      <li>Adaprox Fingerbot (Product ID: 'y6kttvd6'): Features a built-in battery with USB type C charging.</li>
+      <li>Fingerbot Plus (Product IDs: 'blliqpsj', 'ndvkgsrm', 'yiihr7zh', 'neq16kgd'): Almost the same as the original, with a sensor button for manual control.</li>
+      <li>CubeTouch 1s (Product ID: '3yqdo5yt'): Features a built-in battery with USB type C charging.</li>
+      <li>CubeTouch II (Product ID: 'xhf790if'): Features a built-in battery with USB type C charging.</li>
+    </ul>
+    <p>All features are available in Home Assistant. Programming (series of actions) is implemented for the Fingerbot Plus. Exposed entities include 'Program' (switch), 'Repeat forever', 'Repeats count', 'Idle position', and 'Program' (text). The format of the program text is: 'position[/time];...' where the position is in percentages and optional time is in seconds (zero if missing).</p>
   </li>
   <li>
-    <strong>Adaprox Fingerbot</strong> (Product ID: 'y6kttvd6'): Features a built-in battery with USB Type-C charging.
+    <h3>Temperature and Humidity Sensors (Category ID: 'wsdcg')</h3>
+    <ul>
+      <li>Soil Moisture Sensor (Product ID: 'ojzlzzsw').</li>
+    </ul>
   </li>
   <li>
-    <strong>Fingerbot Plus</strong> (Product IDs: 'blliqpsj', 'ndvkgsrm', 'yiihr7zh', 'neq16kgd'): Similar to the original with a sensor button for manual control.
+    <h3>CO2 Sensors (Category ID: 'co2bj')</h3>
+    <ul>
+      <li>CO2 Detector (Product ID: '59s19z5m').</li>
+    </ul>
   </li>
   <li>
-    <strong>CubeTouch 1s</strong> (Product ID: '3yqdo5yt'): Features a built-in battery with USB Type-C charging.
+    <h3>Smart Locks (Category ID: 'ms')</h3>
+    <ul>
+      <li>Smart Lock (Product IDs: 'ludzroix', 'isk2p555').</li>
+    </ul>
   </li>
   <li>
-    <strong>CubeTouch II</strong> (Product ID: 'xhf790if'): Features a built-in battery with USB Type-C charging.
+    <h3>Climate (Category ID: 'wk')</h3>
+    <ul>
+      <li>Thermostatic Radiator Valve (Product IDs: 'drlajpqc', 'nhj2j7su').</li>
+    </ul>
   </li>
-</ul>
-
-<p>All features are available in Home Assistant. Programming (series of actions) is implemented for the Fingerbot Plus. Exposed entities include 'Program' (switch), 'Repeat forever', 'Repeats count', 'Idle position', and 'Program' (text). The format of the program text is: 'position[/time];...' where the position is in percentages and optional time is in seconds (zero if missing).</p>
-
-<h3>Temperature and Humidity Sensors (Category ID: 'wsdcg')</h3>
-
-<ul>
   <li>
-    <strong>Soil Moisture Sensor</strong> (Product ID: 'ojzlzzsw').
+    <h3>Smart Water Bottle (Category ID: 'znhsb')</h3>
+    <ul>
+      <li>Smart Water Bottle (Product ID: 'cdlandip').</li>
+    </ul>
   </li>
-</ul>
-
-<h3>CO2 Sensors (Category ID: 'co2bj')</h3>
-
-<ul>
   <li>
-    <strong>CO2 Detector</strong> (Product ID: '59s19z5m').
-  </li>
-</ul>
-
-<h3>Smart Locks (Category ID: 'ms')</h3>
-
-<ul>
-  <li>
-    <strong>Smart Lock</strong> (Product IDs: 'ludzroix', 'isk2p555').
-  </li>
-</ul>
-
-<h3>Climate (Category ID: 'wk')</h3>
-
-<ul>
-  <li>
-    <strong>Thermostatic Radiator Valve</strong> (Product IDs: 'drlajpqc', 'nhj2j7su').
-  </li>
-</ul>
-
-<h3>Smart Water Bottle (Category ID: 'znhsb')</h3>
-
-<ul>
-  <li>
-    <strong>Smart Water Bottle</strong> (Product ID: 'cdlandip')
-  </li>
-</ul>
-
-<h3>Irrigation Computer (Category ID: 'ggq')</h3>
-
-<ul>
-  <li>
-    <strong>Irrigation Computer</strong> (Product ID: '6pahkcau')
+    <h3>Irrigation Computer (Category ID: 'ggq')</h3>
+    <ul>
+      <li>Irrigation Computer (Product ID: '6pahkcau').</li>
+    </ul>
   </li>
 </ul>
