@@ -19,8 +19,7 @@ from homeassistant.components.bluetooth import (
     async_discovered_service_info,
 )
 from homeassistant.const import (
-    CONF_ADDRESS, 
-    CONF_DEVICE_ID,
+    CONF_ADDRESS,
     CONF_COUNTRY_CODE,
     CONF_PASSWORD,
     CONF_USERNAME,
@@ -28,21 +27,24 @@ from homeassistant.const import (
 from homeassistant.core import callback
 from homeassistant.data_entry_flow import FlowHandler, FlowResult
 
+from homeassistant.components.tuya.const import (
+    CONF_APP_TYPE,
+    CONF_ENDPOINT,
+    TUYA_RESPONSE_CODE,
+    TUYA_RESPONSE_MSG,
+    TUYA_RESPONSE_SUCCESS
+)
+
 from .tuya_ble import SERVICE_UUID, TuyaBLEDeviceCredentials
 
 from .const import (
-    TUYA_COUNTRIES,
-    TUYA_SMART_APP,
-    SMARTLIFE_APP,
-    TUYA_RESPONSE_SUCCESS,
-    TUYA_RESPONSE_CODE,
-    TUYA_RESPONSE_MSG,
+    DOMAIN,
     CONF_ACCESS_ID,
     CONF_ACCESS_SECRET,
-    CONF_APP_TYPE,
     CONF_AUTH_TYPE,
-    CONF_ENDPOINT,
-    DOMAIN,
+    SMARTLIFE_APP,
+    TUYA_SMART_APP,
+    TUYA_COUNTRIES
 )
 from .devices import TuyaBLEData, get_device_readable_name
 from .cloud import HASSTuyaBLEDeviceManager
