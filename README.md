@@ -1,4 +1,4 @@
-<h1 align="center">Work in Progress: Tuya BLE Devices</h1>
+<h1 align="center">Work in Progress: <br>Tuya BLE Devices</h1>
 
 <p align="center">
   <img src="https://img.shields.io/github/license/SupaHotMoj0/tuya_ble?style=flat-square" alt="License">
@@ -11,7 +11,6 @@
 <p align="center">
   This integration supports Tuya devices connected via BLE.
 </p>
-
 <p align="center">
   Inspired by the code of <a href="https://github.com/PlusPlus-ua/ha_tuya_ble">@PlusPlus-u</a> and <a href="https://github.com/redphx/poc-tuya-ble-fingerbot">@redphx</a>.
 </p>
@@ -19,7 +18,7 @@
 <h2 align="center">Installation</h2>
 
 <p align="center">
-  To install, place the <code>custom_components</code> folder in your Home Assistant configuration directory. <br> Alternatively, you can install via <a href="https://hacs.xyz/">HACS</a>.
+  To install, place the <code>custom_components</code> folder in your Home Assistant configuration directory. <br>Alternatively, you can install via <a href="https://hacs.xyz/">HACS</a>.
 </p>
 
 <p align="center">
