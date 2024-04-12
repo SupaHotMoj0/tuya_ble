@@ -19,7 +19,7 @@
 <h2 align="center">Installation</h2>
 
 <p align="center">
-  To install, place the <code>custom_components</code> folder in your Home Assistant configuration directory. Alternatively, you can install via <a href="https://hacs.xyz/">HACS</a>.
+  To install, place the <code>custom_components</code> folder in your Home Assistant configuration directory. <br> Alternatively, you can install via <a href="https://hacs.xyz/">HACS</a>.
 </p>
 
 <p align="center">
