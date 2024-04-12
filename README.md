@@ -40,52 +40,67 @@
 
 <h2 align="center">Supported Devices List</h2>
 
-<ul>
-  <li>
-    <h3>Fingerbots (Category ID: 'szjqr')</h3>
-    <ul>
-      <li>Fingerbot (Product IDs: 'ltak7e1p', 'y6kttvd6', 'yrnk7mnn', 'nvr2rocq', 'bnt7wajf', 'rvdceqjh', '5xhbk964'): The original device, powered by a CR2 battery.</li>
-      <li>Adaprox Fingerbot (Product ID: 'y6kttvd6'): Features a built-in battery with USB type C charging.</li>
-      <li>Fingerbot Plus (Product IDs: 'blliqpsj', 'ndvkgsrm', 'yiihr7zh', 'neq16kgd'): Almost the same as the original, with a sensor button for manual control.</li>
-      <li>CubeTouch 1s (Product ID: '3yqdo5yt'): Features a built-in battery with USB type C charging.</li>
-      <li>CubeTouch II (Product ID: 'xhf790if'): Features a built-in battery with USB type C charging.</li>
-    </ul>
-    <p>All features are available in Home Assistant. Programming (series of actions) is implemented for the Fingerbot Plus. Exposed entities include 'Program' (switch), 'Repeat forever', 'Repeats count', 'Idle position', and 'Program' (text). The format of the program text is: 'position[/time];...' where the position is in percentages and optional time is in seconds (zero if missing).</p>
-  </li>
-  <li>
-    <h3>Temperature and Humidity Sensors (Category ID: 'wsdcg')</h3>
-    <ul>
-      <li>Soil Moisture Sensor (Product ID: 'ojzlzzsw').</li>
-    </ul>
-  </li>
-  <li>
-    <h3>CO2 Sensors (Category ID: 'co2bj')</h3>
-    <ul>
-      <li>CO2 Detector (Product ID: '59s19z5m').</li>
-    </ul>
-  </li>
-  <li>
-    <h3>Smart Locks (Category ID: 'ms')</h3>
-    <ul>
-      <li>Smart Lock (Product IDs: 'ludzroix', 'isk2p555').</li>
-    </ul>
-  </li>
-  <li>
-    <h3>Climate (Category ID: 'wk')</h3>
-    <ul>
-      <li>Thermostatic Radiator Valve (Product IDs: 'drlajpqc', 'nhj2j7su').</li>
-    </ul>
-  </li>
-  <li>
-    <h3>Smart Water Bottle (Category ID: 'znhsb')</h3>
-    <ul>
-      <li>Smart Water Bottle (Product ID: 'cdlandip').</li>
-    </ul>
-  </li>
-  <li>
-    <h3>Irrigation Computer (Category ID: 'ggq')</h3>
-    <ul>
-      <li>Irrigation Computer (Product ID: '6pahkcau').</li>
-    </ul>
-  </li>
-</ul>
+  <ul>
+    <li>
+      <details>
+        <summary><h3>Fingerbots (Category ID: 'szjqr')</h3></summary>
+        <ul>
+          <li>Fingerbot (Product IDs: 'ltak7e1p', 'y6kttvd6', 'yrnk7mnn', 'nvr2rocq', 'bnt7wajf', 'rvdceqjh', '5xhbk964'): The original device, powered by a CR2 battery.</li>
+          <li>Adaprox Fingerbot (Product ID: 'y6kttvd6'): Features a built-in battery with USB type C charging.</li>
+          <li>Fingerbot Plus (Product IDs: 'blliqpsj', 'ndvkgsrm', 'yiihr7zh', 'neq16kgd'): Almost the same as the original, with a sensor button for manual control.</li>
+          <li>CubeTouch 1s (Product ID: '3yqdo5yt'): Features a built-in battery with USB type C charging.</li>
+          <li>CubeTouch II (Product ID: 'xhf790if'): Features a built-in battery with USB type C charging.</li>
+        </ul>
+        <p>All features are available in Home Assistant. Programming (series of actions) is implemented for the Fingerbot Plus. Exposed entities include 'Program' (switch), 'Repeat forever', 'Repeats count', 'Idle position', and 'Program' (text). The format of the program text is: 'position[/time];...' where the position is in percentages and optional time is in seconds (zero if missing).</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><h3>Temperature and Humidity Sensors (Category ID: 'wsdcg')</h3></summary>
+        <ul>
+          <li>Soil Moisture Sensor (Product ID: 'ojzlzzsw').</li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><h3>CO2 Sensors (Category ID: 'co2bj')</h3></summary>
+        <ul>
+          <li>CO2 Detector (Product ID: '59s19z5m').</li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><h3>Smart Locks (Category ID: 'ms')</h3></summary>
+        <ul>
+          <li>Smart Lock (Product IDs: 'ludzroix', 'isk2p555').</li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><h3>Climate (Category ID: 'wk')</h3></summary>
+        <ul>
+          <li>Thermostatic Radiator Valve (Product IDs: 'drlajpqc', 'nhj2j7su').</li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><h3>Smart Water Bottle (Category ID: 'znhsb')</h3></summary>
+        <ul>
+          <li>Smart Water Bottle (Product ID: 'cdlandip').</li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><h3>Irrigation Computer (Category ID: 'ggq')</h3></summary>
+        <ul>
+          <li>Irrigation Computer (Product ID: '6pahkcau').</li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</details>
