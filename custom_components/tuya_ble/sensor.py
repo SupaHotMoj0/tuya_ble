@@ -147,7 +147,7 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
     ),
     "ms": TuyaBLECategorySensorMapping(
         products={
-            "isljqiq1": [  # CO2 Detector
+            "isljqiq1": [  # Smart Lock
                 TuyaBLESensorMapping(
                     dp_id=21, # Requires more testing
                     description=SensorEntityDescription(
@@ -162,13 +162,13 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                         ],
                     ),
                 ),
-                TuyaBLESensorMapping(
-                    dp_id=12, # Retrieve last fingerprint used
-                    description=SensorEntityDescription(
-                        key="unlock_fingerprint",
-                        icon="mdi:fingerprint",
-                    ),
-                ),
+#                TuyaBLESensorMapping(
+#                    dp_id=12, # Retrieve last fingerprint used
+#                    description=SensorEntityDescription(
+#                        key="unlock_fingerprint",
+#                        icon="mdi:fingerprint",
+#                    ),
+#                ),
 #                TuyaBLESensorMapping(
 #                    dp_id=15, # Retrieve last card used
 #                    description=SensorEntityDescription(
@@ -176,13 +176,13 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
 #                        icon="mdi:nfc-variant",
 #                    ),
 #                ),
-                TuyaBLESensorMapping(
-                    dp_id=13, # Retrieve last code used
-                    description=SensorEntityDescription(
-                        key="unlock_password",
-                        icon="mdi:keyboard-outline",
-                    ),
-                ),
+#                TuyaBLESensorMapping(
+#                    dp_id=13, # Retrieve last code used
+#                    description=SensorEntityDescription(
+#                        key="unlock_password",
+#                        icon="mdi:keyboard-outline",
+#                    ),
+#                ),
                 TuyaBLEBatteryMapping(dp_id=9),
             ],
         }
