@@ -27,7 +27,7 @@ from homeassistant.const import (
 from homeassistant.core import callback
 from homeassistant.data_entry_flow import FlowHandler, FlowResult
 
-from homeassistant.components.tuya.const import (
+from homeassistant.core import (
     CONF_APP_TYPE,
     CONF_ENDPOINT,
     TUYA_RESPONSE_CODE,
@@ -50,7 +50,6 @@ from .devices import TuyaBLEData, get_device_readable_name
 from .cloud import HASSTuyaBLEDeviceManager
 
 _LOGGER = logging.getLogger(__name__)
-
 
 async def _try_login(
     manager: HASSTuyaBLEDeviceManager,
@@ -99,7 +98,6 @@ async def _try_login(
         )
 
     return None
-
 
 def _show_login_form(
     flow: FlowHandler,
@@ -152,7 +150,6 @@ def _show_login_form(
         description_placeholders=placeholders,
     )
 
-
 class TuyaBLEOptionsFlow(OptionsFlowWithConfigEntry):
     """Handle a Tuya BLE options flow."""
 
@@ -204,7 +201,6 @@ class TuyaBLEOptionsFlow(OptionsFlowWithConfigEntry):
             user_input.update(self.config_entry.options)
 
         return _show_login_form(self, user_input, errors, placeholders)
-
 
 class TuyaBLEConfigFlow(ConfigFlow, domain=DOMAIN):
     """Handle a config flow for Tuya BLE."""
@@ -292,6 +288,8 @@ class TuyaBLEConfigFlow(ConfigFlow, domain=DOMAIN):
             discovery_info = self._discovered_devices[address]
             local_name = await get_device_readable_name(discovery_info, self._manager)
             await self.async_set_unique_id(
+                discovery_info
+await self.async_set_unique_id(
                 discovery_info.address, raise_on_progress=False
             )
             self._abort_if_unique_id_configured()
