@@ -1,8 +1,8 @@
 """The Tuya BLE integration."""
+
 from __future__ import annotations
 
 import logging
-
 from dataclasses import dataclass
 import json
 from typing import Any, Iterable
@@ -15,13 +15,6 @@ from homeassistant.const import (
     CONF_USERNAME,
 )
 from homeassistant.core import HomeAssistant
-from homeassistant.components.tuya.const import (
-    CONF_APP_TYPE,
-    CONF_ENDPOINT,
-    DOMAIN as TUYA_DOMAIN,
-    TUYA_RESPONSE_RESULT,
-    TUYA_RESPONSE_SUCCESS,
-)
 from homeassistant.helpers.entity import DeviceInfo, EntityDescription
 from homeassistant.helpers.update_coordinator import (
     CoordinatorEntity,
@@ -53,9 +46,6 @@ from .const import (
     TUYA_API_DEVICES_URL,
     TUYA_API_FACTORY_INFO_URL,
     TUYA_FACTORY_INFO_MAC,
-    TUYA_API_DEVICES_URL,
-    TUYA_API_FACTORY_INFO_URL,
-    TUYA_FACTORY_INFO_MAC,
     CONF_ACCESS_ID,
     CONF_ACCESS_SECRET,
     CONF_AUTH_TYPE,
@@ -64,13 +54,11 @@ from .const import (
 
 _LOGGER = logging.getLogger(__name__)
 
-
 @dataclass
 class TuyaCloudCacheItem:
     api: TuyaOpenAPI | None
     login: dict[str, Any]
     credentials: dict[str, dict[str, Any]]
-
 
 CONF_TUYA_LOGIN_KEYS = [
     CONF_ENDPOINT,
@@ -95,7 +83,6 @@ CONF_TUYA_DEVICE_KEYS = [
 ]
 
 _cache: dict[str, TuyaCloudCacheItem] = {}
-
 
 class HASSTuyaBLEDeviceManager(AbstaractTuyaBLEDeviceManager):
     """Cloud connected manager of the Tuya BLE devices credentials."""
@@ -293,6 +280,4 @@ class HASSTuyaBLEDeviceManager(AbstaractTuyaBLEDeviceManager):
 
         return result
 
-    @property
-    def data(self) -> dict[str, Any]:
-        return self._data
+    @
