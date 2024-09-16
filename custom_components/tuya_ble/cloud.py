@@ -280,4 +280,6 @@ class HASSTuyaBLEDeviceManager(AbstaractTuyaBLEDeviceManager):
 
         return result
 
-    @
+    @property
+    def data(self) -> dict[str, Any]:
+        return self._data
