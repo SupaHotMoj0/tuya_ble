@@ -8,13 +8,13 @@
 
 <h2 align="center">Overview</h2>
 <p align="center">
-  This integration allows you to integrate and control Tuya BLE (Bluetooth Low Energy) devices directly within Home Assistant,
+  This integration allows you to integrate and control Tuya BLE (Bluetooth Low Energy) devices directly within Home Assistant, <br>
   enabling local operations without relying on remote cloud services for core functionality.
 </p>
 <p align="center">
-  Inspired by and derived from the code of:
-  <a href="https://github.com/PlusPlus-ua/ha_tuya_ble">@PlusPlus-u</a> and 
-  <a href="https://github.com/redphx/poc-tuya-ble-fingerbot">@redphx</a>.
+  Inspired by and derived from the code of: <br>
+  💐 <a href="https://github.com/PlusPlus-ua/ha_tuya_ble">@PlusPlus-u</a> 💐<br>
+  💐 <a href="https://github.com/redphx/poc-tuya-ble-fingerbot">@redphx 💐</a>
 </p>
 
 <h2 align="center">Features</h2>
@@ -27,7 +27,7 @@
 
 <h2 align="center">Installation</h2>
 <p align="center">
-  To install, place the <code>custom_components</code> folder into your Home Assistant configuration directory.
+  To install, place the <code>custom_components</code> folder into your Home Assistant configuration directory. <br>
   Alternatively, you can install via <a href="https://hacs.xyz/">HACS</a>.
 </p>
 <p align="center">
@@ -42,71 +42,88 @@
   If needed, you can also add discoverable devices manually through the Home Assistant UI.
 </p>
 <p align="center">
-  <b>Note:</b> Although this integration works locally, you must provide a device ID and encryption key for each Tuya BLE device.
-  These credentials are the same as those used by the official Tuya integration and can be obtained from the Tuya IoT platform.
+  <b>Note:</b> Although this integration works locally, you must provide a device ID and encryption key for each Tuya BLE device. <br>
+  These credentials are the same as those used by the official Tuya integration and can be obtained from the Tuya IoT platform. <br>
   For detailed instructions, please refer to the official <a href="https://www.home-assistant.io/integrations/tuya/">Tuya integration documentation</a>.
 </p>
 
 <h2 align="center">Supported Devices</h2>
-<p align="center">
-  Below is a list of currently supported device categories and their corresponding products.
-</p>
+<table align="center">
+  <thead>
+    <tr>
+      <th>Category (ID)</th>
+      <th>Device Name</th>
+      <th>Product ID(s)</th>
+      <th>Description / Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="5">Fingerbots<br>(szjqr)</td>
+      <td>Fingerbot</td>
+      <td>'ltak7e1p', 'y6kttvd6', 'yrnk7mnn', 'nvr2rocq', 'bnt7wajf', 'rvdceqjh', '5xhbk964'</td>
+      <td>The original CR2 battery-powered device.</td>
+    </tr>
+    <tr>
+      <td>Adaprox Fingerbot</td>
+      <td>'y6kttvd6'</td>
+      <td>Similar to the original Fingerbot, featuring a built-in battery with USB-C charging.</td>
+    </tr>
+    <tr>
+      <td>Fingerbot Plus</td>
+      <td>'blliqpsj', 'ndvkgsrm', 'yiihr7zh', 'neq16kgd'</td>
+      <td>Enhanced Fingerbot with a sensor button for manual control.</td>
+    </tr>
+    <tr>
+      <td>CubeTouch 1s</td>
+      <td>'3yqdo5yt'</td>
+      <td>Built-in battery and USB-C charging.</td>
+    </tr>
+    <tr>
+      <td>CubeTouch II</td>
+      <td>'xhf790if'</td>
+      <td>Built-in battery and USB-C charging.</td>
+    </tr>
+    <tr>
+      <td>Temperature &amp; Humidity Sensors<br>(wsdcg)</td>
+      <td>Soil Moisture Sensor</td>
+      <td>'ojzlzzsw'</td>
+      <td>Monitors soil moisture levels.</td>
+    </tr>
+    <tr>
+      <td>CO2 Sensors<br>(co2bj)</td>
+      <td>CO2 Detector</td>
+      <td>'59s19z5m'</td>
+      <td>Measures CO2 concentrations.</td>
+    </tr>
+    <tr>
+      <td>Smart Locks<br>(ms)</td>
+      <td>Smart Lock</td>
+      <td>'ludzroix', 'isk2p555'</td>
+      <td>Allows lock/unlock control and status monitoring.</td>
+    </tr>
+    <tr>
+      <td>Climate<br>(wk)</td>
+      <td>Thermostatic Radiator Valve</td>
+      <td>'drlajpqc', 'nhj2j7su'</td>
+      <td>Controls and regulates radiator heating.</td>
+    </tr>
+    <tr>
+      <td>Smart Water Bottle<br>(znhsb)</td>
+      <td>Smart Water Bottle</td>
+      <td>'cdlandip'</td>
+      <td>Monitors water intake and temperature.</td>
+    </tr>
+    <tr>
+      <td>Irrigation Computer<br>(ggq)</td>
+      <td>Irrigation Computer</td>
+      <td>'6pahkcau'</td>
+      <td>Automates and schedules garden or lawn watering.</td>
+    </tr>
+  </tbody>
+</table>
 
-<h3>Fingerbots (Category ID: 'szjqr')</h3>
-<ul>
-  <li>Fingerbot (Product IDs: 'ltak7e1p', 'y6kttvd6', 'yrnk7mnn', 'nvr2rocq', 'bnt7wajf', 'rvdceqjh', '5xhbk964'): 
-    The original CR2 battery-powered device.</li>
-  <li>Adaprox Fingerbot (Product ID: 'y6kttvd6'): 
-    Similar to the original Fingerbot, featuring a built-in battery with USB-C charging.</li>
-  <li>Fingerbot Plus (Product IDs: 'blliqpsj', 'ndvkgsrm', 'yiihr7zh', 'neq16kgd'): 
-    An enhanced Fingerbot with a sensor button for manual control.</li>
-  <li>CubeTouch 1s (Product ID: '3yqdo5yt'): 
-    A variant with a built-in battery and USB-C charging.</li>
-  <li>CubeTouch II (Product ID: 'xhf790if'): 
-    Another variant featuring a built-in battery and USB-C charging.</li>
-</ul>
-
-<p>All Fingerbot variants are fully integrated into Home Assistant. The Fingerbot Plus offers programmable actions (series of custom commands) exposed as Home Assistant entities. These include:</p>
-<ul>
-  <li><b>Program (switch):</b> Activate or deactivate a custom sequence.</li>
-  <li><b>Repeat forever (boolean):</b> Loop the programmed sequence indefinitely.</li>
-  <li><b>Repeats count (number):</b> Define how many times the sequence repeats.</li>
-  <li><b>Idle position (slider):</b> Set the default idle position percentage.</li>
-  <li><b>Program (text):</b> Define the sequence of actions. Format: <code>position[/time];...</code> 
-    where <code>position</code> is in percentages and <code>time</code> is in seconds (0 if omitted).</li>
-</ul>
-
-<h3>Temperature and Humidity Sensors (Category ID: 'wsdcg')</h3>
-<ul>
-  <li>Soil Moisture Sensor (Product ID: 'ojzlzzsw')</li>
-</ul>
-
-<h3>CO2 Sensors (Category ID: 'co2bj')</h3>
-<ul>
-  <li>CO2 Detector (Product ID: '59s19z5m')</li>
-</ul>
-
-<h3>Smart Locks (Category ID: 'ms')</h3>
-<ul>
-  <li>Smart Lock (Product IDs: 'ludzroix', 'isk2p555')</li>
-</ul>
-
-<h3>Climate (Category ID: 'wk')</h3>
-<ul>
-  <li>Thermostatic Radiator Valve (Product IDs: 'drlajpqc', 'nhj2j7su')</li>
-</ul>
-
-<h3>Smart Water Bottle (Category ID: 'znhsb')</h3>
-<ul>
-  <li>Smart Water Bottle (Product ID: 'cdlandip')</li>
-</ul>
-
-<h3>Irrigation Computer (Category ID: 'ggq')</h3>
-<ul>
-  <li>Irrigation Computer (Product ID: '6pahkcau')</li>
-</ul>
-
-<h2 align="center">Additional Notes</h2>
+<h2 align="center">Additional Note</h2>
 <p align="center">
   This integration is a work-in-progress. More devices, categories, and features are planned.
 </p>
@@ -118,5 +135,5 @@
 
 <h2 align="center">License</h2>
 <p align="center">
-  This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.
+  This project is licensed under the MIT License. <br> See the <a href="LICENSE">LICENSE</a> file for details.
 </p>
